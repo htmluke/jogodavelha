@@ -12,7 +12,7 @@ int main()
          jogador1, jogador2; //Variáveis para os dois jogadores e o possível ganhador
          
     int dimensao = 3, //Variável de referência (linha e coluna) para o for se locomover através da matriz
-        auxiliar = 0, //Variável para auxiliar a impressão do tabuleiro
+        auxiliar = 1, //Variável para auxiliar a impressão do tabuleiro
         entrada; //Variável para pegar a resposta do usuário
     
     tabuleiro = alocaMatriz(tabuleiro, dimensao); //Chama função de alocação e inicialização da matriz
@@ -29,12 +29,13 @@ int main()
             cout << "Reiniciando o tabuleiro.\n" << endl;
             limpaTabuleiro(tabuleiro, dimensao);
         }
-        else if(entrada == '2')
+        else if(entrada == 2)
         {
             cout << "Saindo do jogo." << endl;
-            auxiliar == 1;
+            auxiliar = 0;
+            //break;
         }
-    }while(auxiliar == 0);
+    }while(auxiliar != 0);
 
     free(tabuleiro); //libera a memória ocupada pela matriz
 
