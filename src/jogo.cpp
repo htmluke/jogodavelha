@@ -22,14 +22,14 @@ void rodadas(char **tabuleiro, int dimensao, char jogador1, char jogador2)
         if(i >= 4)
         {
             ganhador = vencedor(tabuleiro, jogador1, ganhador);
-            if(i == 8)
+        }
+        if(i == 8)
             {
                 tabuleiroCompleto(tabuleiro, dimensao);
             }
-            if(ganhador == 1)
-            {
-                break;
-            }
+        if(ganhador == 1)
+        {
+            break;
         }
     }
 }
@@ -145,6 +145,5 @@ int vencedor(char **tabuleiro, char jogador1, int ganhador)
             ganhador = 1;
         }
     }
-
     return ganhador;
 }
