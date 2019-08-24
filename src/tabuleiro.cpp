@@ -4,7 +4,7 @@
 
 using namespace std;
 
-void alocaMatriz(char **tabuleiro, int dimensao)
+char **alocaMatriz(char **tabuleiro, int dimensao)
 {
     //Alocando dinamicamente a matriz na memória
     tabuleiro = (char**)calloc(dimensao, sizeof(char*));
@@ -20,6 +20,7 @@ void alocaMatriz(char **tabuleiro, int dimensao)
             tabuleiro[i][j] = ' ';
         }
     }
+    return tabuleiro;
 }
 
 void imprimeTabuleiro(char **tabuleiro, int dimensao)
