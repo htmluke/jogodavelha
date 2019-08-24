@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void escolheJogador(char jogador1, char jogador2);
+char escolheJogador(char jogador, int numeroJogador);
 void jogada(char **tabuleiro, char jogador, int numeroJogador);
 
 #endif
