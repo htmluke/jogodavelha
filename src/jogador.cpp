@@ -16,12 +16,12 @@ void escolheJogador(char jogador1, char jogador2)
         if(entrada == 'x' || entrada == 'X')
         {
             jogador1 = 'X';
-            jogador2 = 'Y';
+            jogador2 = 'O';
             auxiliar = 1;
         }
-        else if(entrada == 'y' || entrada == 'Y')
+        else if(entrada == 'o' || entrada == 'O')
         {
-            jogador1 = 'Y';
+            jogador1 = 'O';
             jogador2 = 'X';
             auxiliar = 1;
         }
