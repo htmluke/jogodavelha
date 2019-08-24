@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void alocaMatriz(char **tabuleiro, int dimensao);
+char **alocaMatriz(char **tabuleiro, int dimensao);
 void imprimeTabuleiro(char **tabuleiro, int dimensao);
 void limpaTabuleiro(char **tabuleiro, int dimensao);
 void tabuleiroCompleto(char **tabuleiro, int dimensao);
