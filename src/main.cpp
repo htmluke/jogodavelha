@@ -20,7 +20,8 @@ int main()
     do
     {
         imprimeTabuleiro(tabuleiro, dimensao);
-        escolheJogador(jogador1, jogador2);
+        jogador1 = escolheJogador(jogador1, 1);
+        jogador2 = escolheJogador(jogador2, 2);
         rodadas(tabuleiro, dimensao, jogador1, jogador2);
 
         cout << "Jogar mais outra partida?\n1 - sim\n2- nao" << endl;
