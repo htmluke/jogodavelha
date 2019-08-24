@@ -4,25 +4,22 @@
 
 using namespace std;
 
-void escolheJogador(char jogador1, char jogador2)
+char escolheJogador(char jogador, int numeroJogador)
 {
     char entrada;
     int auxiliar = 0;
-    cout << "Jogador 1, decida com qual símbolo irá começar: X ou O\n" << endl;
+    cout << "Jogador" << numeroJogador <<", decida com qual símbolo irá começar:\n" << endl;
     do
     {
         cin >> entrada;
-
         if(entrada == 'x' || entrada == 'X')
         {
-            jogador1 = 'X';
-            jogador2 = 'O';
+            jogador = 'X';
             auxiliar = 1;
         }
         else if(entrada == 'o' || entrada == 'O')
         {
-            jogador1 = 'O';
-            jogador2 = 'X';
+            jogador = 'O';
             auxiliar = 1;
         }
         else
@@ -30,6 +27,8 @@ void escolheJogador(char jogador1, char jogador2)
             cout << "Opção inválida, digite novamente.\n" << endl;
         }
     }while(auxiliar == 0);
+    
+    return jogador;
 }
 
 void jogada(char **tabuleiro, char jogador, int numeroJogador)
