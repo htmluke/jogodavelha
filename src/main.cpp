@@ -9,12 +9,13 @@ using namespace std;
 int main()
 {
     char **tabuleiro, //Cria uma matriz de ponteiros de ponteiros para o tabuleiros
-         jogador1, jogador2, //Variáveis para os dois jogadores e o possível ganhador
-         entrada; //Variável para pegar a resposta do usuário
+         jogador1, jogador2; //Variáveis para os dois jogadores e o possível ganhador
+         
     int dimensao = 3, //Variável de referência (linha e coluna) para o for se locomover através da matriz
-        auxiliar = 0; //Variável para auxiliar a impressão do tabuleiro
-
-    alocaMatriz(tabuleiro, dimensao); //Chama função de alocação e inicialização da matriz
+        auxiliar = 0, //Variável para auxiliar a impressão do tabuleiro
+        entrada; //Variável para pegar a resposta do usuário
+    
+    tabuleiro = alocaMatriz(tabuleiro, dimensao); //Chama função de alocação e inicialização da matriz
     
     do
     {
@@ -22,13 +23,13 @@ int main()
         escolheJogador(jogador1, jogador2);
         rodadas(tabuleiro, dimensao, jogador1, jogador2);
 
-        cout << "Jogar mais outra partida?\n- s\n- n" << endl;
+        cout << "Jogar mais outra partida?\n1 - sim\n2- nao" << endl;
         cin >> entrada;
-        if(entrada == 's'){
+        if(entrada == 1){
             cout << "Reiniciando o tabuleiro.\n" << endl;
             limpaTabuleiro(tabuleiro, dimensao);
         }
-        else
+        else if(entrada == '2')
         {
             cout << "Saindo do jogo." << endl;
             auxiliar == 1;
