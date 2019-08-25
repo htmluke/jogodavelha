@@ -4,22 +4,24 @@
 
 using namespace std;
 
-char escolheJogador(char jogador, int numeroJogador)
+char escolheJogador(char jogador[2])
 {
     char entrada;
     int auxiliar = 0;
-    cout << "Jogador" << numeroJogador <<", decida com qual símbolo irá começar:\n" << endl;
+    cout << "Jogador, decida com qual símbolo irá começar:\n" << endl;
     do
     {
         cin >> entrada;
         if(entrada == 'x' || entrada == 'X')
         {
-            jogador = 'X';
+            jogador[0] = 'X';
+            jogador[1] = 'O';
             auxiliar = 1;
         }
         else if(entrada == 'o' || entrada == 'O')
         {
-            jogador = 'O';
+            jogador[0] = 'O';
+            jogador[1] = 'X';
             auxiliar = 1;
         }
         else
@@ -28,7 +30,9 @@ char escolheJogador(char jogador, int numeroJogador)
         }
     }while(auxiliar == 0);
     
-    return jogador;
+    cout << "Pronto! O Jogador 1 será " << jogador[0] << " e o Jogador 2 será " << jogador[1] << ".\n" << endl;
+
+    return jogador[2];
 }
 
 void jogada(char **tabuleiro, char jogador, int numeroJogador)
