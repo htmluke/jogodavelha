@@ -34,7 +34,6 @@ int main()
         {
             cout << "Saindo do jogo." << endl;
             auxiliar = 0;
-            //break;
         }
     }while(auxiliar != 0);
 
