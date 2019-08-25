@@ -1,5 +1,5 @@
 # jogodavelha
-Jogo da velha desenvolvido em C/C++ para a matéria de Linguagem de Programação I - 2019.2 
+Jogo da velha desenvolvido em C/C++ - Linguagem de Programação I - 2019.2 
 
 ## Como usar
 
