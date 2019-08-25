@@ -54,7 +54,7 @@ void tabuleiroCompleto(char **tabuleiro, int dimensao)
     {
         for(int j = 0; j < dimensao; j++)
         {
-            if(tabuleiro[i][j] == ' ')
+            if(tabuleiro[i][j] == 'X' || tabuleiro[i][j] == 'O')
             {
                 contador += 1;
             }
