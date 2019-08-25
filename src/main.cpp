@@ -9,7 +9,7 @@ using namespace std;
 int main()
 {
     char **tabuleiro, //Cria uma matriz de ponteiros de ponteiros para o tabuleiros
-         jogador1, jogador2; //Variáveis para os dois jogadores e o possível ganhador
+         jogador1, jogador2, jogador[2]; //Variáveis para os dois jogadores e o possível ganhador
          
     int dimensao = 3, //Variável de referência (linha e coluna) para o for se locomover através da matriz
         auxiliar = 1, //Variável para auxiliar a impressão do tabuleiro
@@ -20,11 +20,12 @@ int main()
     do
     {
         imprimeTabuleiro(tabuleiro, dimensao);
-        jogador1 = escolheJogador(jogador1, 1);
-        jogador2 = escolheJogador(jogador2, 2);
+        jogador[2] = escolheJogador(jogador);
+        jogador1 = jogador[0];
+        jogador2 = jogador[1];
         rodadas(tabuleiro, dimensao, jogador1, jogador2);
 
-        cout << "Jogar mais outra partida?\n1 - sim\n2- nao" << endl;
+        cout << "Jogar mais outra partida?\n1 - sim\n2 - nao" << endl;
         cin >> entrada;
         if(entrada == 1){
             cout << "Reiniciando o tabuleiro.\n" << endl;
