@@ -29,6 +29,7 @@ void rodadas(char **tabuleiro, int dimensao, char jogador1, char jogador2)
             }
         if(ganhador == 1)
         {
+            imprimeTabuleiro(tabuleiro, dimensao);
             break;
         }
     }
