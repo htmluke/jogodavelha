@@ -4,7 +4,7 @@ Jogo da velha desenvolvido em C/C++ - Linguagem de Programação I - 2019.2
 ## Como usar
 
 ```
-git clone https://github.com/htmluke/ImageProcessing-ITP
+git clone https://github.com/htmluke/jogodavelha
 make
 ./exe
 ```
