@@ -1,3 +1,16 @@
+# useful Variables
+
+BLDDIR = objects
+SRCDIR = src
+INCDIR = include
+
+CC = g++
+SRCEXT = cpp
+SOURCES = $(shell find $(SRCDIR) -type f -name "*.$(SRCEXT)")
+OBJECTS := $(patsubst $(SRCDIR)/%,$(BLDDIR)/%,$(SOURCES:.$(SRCEXT)=.o))
+CFLAGS = -Iinclude
+TARGET = exe
+
 # phony targets ("recipes" to be executed) 
 
 .PHONY: all, build, clean, folders
@@ -17,29 +30,23 @@ build: folders exe
 # ignore nonexistent files and arguments
 
 clean:
-	rm -rf objects
-	rm -f exe
+	rm -rf $(BLDDIR)
+	rm -f $(TARGET)
 
 # "make folders" will create the directory where the compiled
 # objects will go to
 
 folders:
-	mkdir -p objects
+	mkdir -p $(BLDDIR)
 
 # the next targets are referring to the compilation process 
-# of the other .cpp files besides main 
+# of the all .c files
 
-objects/tabuleiro.o: src/tabuleiro.cpp
-	g++ src/tabuleiro.cpp -Iinclude -c -o objects/tabuleiro.o
-
-objects/jogo.o: src/jogo.cpp
-	g++ src/jogo.cpp -Iinclude -c -o objects/jogo.o
-
-objects/jogador.o: src/jogador.cpp
-	g++ src/jogador.cpp -Iinclude -c -o objects/jogador.o
+$(BLDDIR)/%.o: $(SRCDIR)/%.$(SRCEXT)
+	$(CC) -c -o $@ $< $(CFLAGS)
 
 # this target has the instructions needed for the compilation
-# of main.cpp and all the objects previously compiled
+# of all the objects previously compiled
 
-exe: src/main.cpp objects/tabuleiro.o objects/jogo.o objects/jogador.o 
-	g++ src/main.cpp objects/tabuleiro.o objects/jogo.o objects/jogador.o -Iinclude -o exe
+$(TARGET): $(OBJECTS)
+	$(CC) $^ -o $@ $(CFLAGS)
