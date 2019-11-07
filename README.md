@@ -10,7 +10,7 @@ make
 ```
 
 ## Sobre o projeto
-Nesse projeto, foi implementado um programa em C++ que simula um jogo da velha, habilitando os jogadores decidirem qual simbólo desejam começar e permitindo que façam jogadas corretas, evitando erros comuns, entre outras características comuns do jogo.
+Nesse projeto, foi implementado um programa em C++ que simula um jogo da velha, habilitando os jogadores a decidirem qual simbólo desejam começar e permitindo que façam jogadas corretas, evitando erros comuns, entre outras características comuns do jogo.
 
 ## Funcionalidades
 As funcionalidades implementadas foram separadas em seções, para que não aja confusão de funções na hora da leitura do código. Utilizando-se da modularização, foram separas em três partes: tabuleiro, jogo e jogador.
